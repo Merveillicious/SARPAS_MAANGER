@@ -1,0 +1,20 @@
+{
+  "name": "@sarpras/shared",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Skema Zod, tipe, enum, dan daftar izin yang dipakai frontend dan backend",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
