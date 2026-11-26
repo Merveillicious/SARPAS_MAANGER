@@ -13,5 +13,8 @@ app.get("/kesehatan", (c) =>
   }),
 );
 
+// Rute API yang tidak dikenal dijawab JSON, bukan halaman HTML frontend.
+app.notFound((c) => c.json({ kode: "TIDAK_DITEMUKAN", pesan: "Alamat API tidak ditemukan" }, 404));
+
 export default app;
 export type ApiType = typeof app;

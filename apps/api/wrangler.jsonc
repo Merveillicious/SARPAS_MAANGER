@@ -8,6 +8,15 @@
   "compatibility_date": "2026-11-01",
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
+  // Worker yang sama melayani frontend (hasil build apps/web) dan API (ADR-002).
+  // Request /api/* selalu masuk ke kode Worker; sisanya dilayani sebagai file statis,
+  // dan URL yang tidak dikenal dikembalikan ke index.html (routing di sisi React).
+  "assets": {
+    "directory": "../web/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"],
+  },
   "vars": {
     "APP_ENV": "local",
   },
