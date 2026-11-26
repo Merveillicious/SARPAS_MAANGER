@@ -1,18 +1,55 @@
 @import "tailwindcss";
 
-/* Token warna dasar. Palet pastel SARPRAS MANAGER ditambahkan di T05. */
+/*
+ * Token tema SARPRAS MANAGER (PRD bagian 8).
+ * Setiap warna pastel punya dua tingkat:
+ *   - <warna>      : latar kartu/label (lembut)
+ *   - <warna>-ink  : teks/ikon di atas latar itu (pekat, kontras >= 4,5:1)
+ * Teks utama selalu gelap agar tetap terbaca di atas pastel (NF-11).
+ */
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #1f2937;
+  --font-sans: "Plus Jakarta Sans", "Nunito", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+
+  /* Dasar */
+  --color-background: #fdf8ef; /* cream */
+  --color-foreground: #2b2d42;
   --color-card: #ffffff;
-  --color-muted: #f3f4f6;
-  --color-border: #e5e7eb;
-  --color-ring: #2563eb;
-  --color-primary: #2563eb;
+  --color-muted: #f4efe6;
+  --color-muted-foreground: #5c5f73;
+  --color-border: #ebe3d6;
+  --color-ring: #1e6aa8;
+
+  /* Palet pastel + tinta */
+  --color-sky: #dcefff;
+  --color-sky-ink: #1d5f96;
+  --color-mint: #d9f5e8;
+  --color-mint-ink: #1d6b4a;
+  --color-lavender: #ebe4ff;
+  --color-lavender-ink: #5a3fa8;
+  --color-peach: #ffe4d6;
+  --color-peach-ink: #a2481c;
+  --color-butter: #fff4c7;
+  --color-butter-ink: #7a5a00;
+  --color-pink: #ffe1ec;
+  --color-pink-ink: #a3305f;
+
+  /* Peran semantik */
+  --color-primary: #1e6aa8; /* kontras 5,7:1 dengan teks putih */
   --color-primary-foreground: #ffffff;
+  --color-success: var(--color-mint-ink);
+  --color-warning: var(--color-butter-ink);
+  --color-danger: #b3261e;
+  --color-danger-soft: #fde2e0;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
+  font-family: var(--font-sans);
 }
