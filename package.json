@@ -1,0 +1,16 @@
+{
+  "name": "sarpras-manager",
+  "private": true,
+  "description": "Sistem Manajemen Sarana dan Prasarana SDN Sukomanunggal III/107 Surabaya",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test"
+  }
+}

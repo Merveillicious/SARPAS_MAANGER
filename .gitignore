@@ -1,0 +1,27 @@
+# Dependensi
+node_modules/
+
+# Hasil build
+dist/
+.wrangler/
+*.tsbuildinfo
+
+# Rahasia lokal: JANGAN pernah di-commit
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Test dan laporan
+coverage/
+playwright-report/
+test-results/
+
+# Editor dan sistem operasi
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.log
