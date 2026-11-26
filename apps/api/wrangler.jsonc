@@ -1,0 +1,24 @@
+// Konfigurasi Cloudflare Worker.
+// JANGAN taruh rahasia di file ini. Rahasia diisi dengan `wrangler secret put NAMA`
+// (staging/production) atau di file .dev.vars (lokal, tidak di-commit).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sarpras-manager",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "vars": {
+    "APP_ENV": "local",
+  },
+  "env": {
+    "staging": {
+      "name": "sarpras-manager-staging",
+      "vars": { "APP_ENV": "staging" },
+    },
+    "production": {
+      "name": "sarpras-manager",
+      "vars": { "APP_ENV": "production" },
+    },
+  },
+}
